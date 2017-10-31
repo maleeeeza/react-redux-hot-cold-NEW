@@ -7,10 +7,8 @@ import './guess-form.css';
 export class GuessForm extends React.Component {
   onSubmit(event) {
     event.preventDefault();
-
-
-      const value = this.input.value;
-      this.props.dispatch(makeGuess(value));
+    const value = this.input.value;
+    this.props.dispatch(makeGuess(value));
 
     this.input.value = '';
     this.input.focus();
@@ -20,7 +18,7 @@ export class GuessForm extends React.Component {
     return (
       <form onSubmit={e => this.onSubmit(e)}>
         <input
-          type="number"
+          type="text"
           name="userGuess"
           id="userGuess"
           className="text"

@@ -1,10 +1,11 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import Header from './header';
 import GuessSection from './guess-section';
 import StatusSection from './status-section';
 import InfoSection from './info-section';
 
-export default function Game(props) {
+export function Game(props) {
     return (
       <div>
         <Header />
@@ -16,3 +17,5 @@ export default function Game(props) {
       </div>
     );
 }
+
+export default connect()(Game);
